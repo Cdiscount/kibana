@@ -1,0 +1,12 @@
+debian/runtime/nginx.conf.template	/usr/share/kibana3/
+debian/runtime/config.js	/etc/kibana3/
+app	/usr/share/kibana3/www/
+build.txt	/usr/share/kibana3/www/
+css	/usr/share/kibana3/www/
+favicon.ico	/usr/share/kibana3/www/
+font	/usr/share/kibana3/www/
+img	/usr/share/kibana3/www/
+index.html	/usr/share/kibana3/www/
+LICENSE.md	/usr/share/kibana3/www/
+README.md	/usr/share/kibana3/www/
+vendor	/usr/share/kibana3/www/

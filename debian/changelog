@@ -1,0 +1,5 @@
+kibana (3.1.2) trusty; urgency=low
+
+  * Initial release from upstream.
+
+ -- Rémi Buisson <remi.buisson@cdiscount.com>  Tue, 06 Jan 2015 08:43:51 +0000

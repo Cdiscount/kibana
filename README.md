@@ -1,4 +1,0 @@
-kibana
-===============
-
-Kibana package

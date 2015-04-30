@@ -1,4 +1,4 @@
-Source: kibana
+Source: kibana4
 Section: net
 Priority: optional
 Maintainer: Rémi BUISSON <remi.buisson@cdiscount.com>
@@ -6,9 +6,9 @@ Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.3
 Homepage: http://www.elasticsearch.org/overview/kibana/
 
-Package: kibana
+Package: kibana4
 Architecture: all
-Depends: nginx (>= 1.4)
+Depends: nginx (>= 1.4), nodejs (>= 0.10.26), supervisor
 Description: Dashboard for Elasticsearch
  Kibana is an open source (Apache Licensed), browser based analytics and search 
  dashboard for Elasticsearch. Kibana is a snap to setup and start using. Kibana 

@@ -15,50 +15,15 @@ server {
 
   server_name           kibana.myhost.org;
   access_log            /var/log/nginx/kibana_access.log;
+  auth_basic "Restricted";
+  auth_basic_user_file /etc/nginx/conf.d/kibana.htpasswd;
 
   location / {
-    root  /usr/share/kibana3/www;
-    index  index.html  index.htm;
-  }
-
-  location ~ ^/_aliases$ {
-    proxy_pass http://127.0.0.1:9200;
-    proxy_read_timeout 90;
-  }
-  location ~ ^/.*/_aliases$ {
-    proxy_pass http://127.0.0.1:9200;
-    proxy_read_timeout 90;
-  }
-  location ~ ^/_nodes$ {
-    proxy_pass http://127.0.0.1:9200;
-    proxy_read_timeout 90;
-  }
-  location ~ ^/.*/_search$ {
-    proxy_pass http://127.0.0.1:9200;
-    proxy_read_timeout 90;
-  }
-  location ~ ^/.*/_mapping {
-    proxy_pass http://127.0.0.1:9200;
-    proxy_read_timeout 90;
-  }
-
-  # Password protected end points
-  location ~ ^/kibana-int/dashboard/.*$ {
-    proxy_pass http://127.0.0.1:9200;
-    proxy_read_timeout 90;
-    limit_except GET {
-      proxy_pass http://127.0.0.1:9200;
-      auth_basic "Restricted";
-      auth_basic_user_file /etc/nginx/conf.d/kibana.htpasswd;
-    }
-  }
-  location ~ ^/kibana-int/temp.*$ {
-    proxy_pass http://127.0.0.1:9200;
-    proxy_read_timeout 90;
-    limit_except GET {
-      proxy_pass http://127.0.0.1:9200;
-      auth_basic "Restricted";
-      auth_basic_user_file /etc/nginx/conf.d/kibana.htpasswd;
-    }
+      proxy_pass http://localhost:5601;
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection 'upgrade';
+      proxy_set_header Host $host;
+      proxy_cache_bypass $http_upgrade;
   }
 }

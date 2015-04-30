@@ -1,3 +1,9 @@
+kibana4 (4.0.2) trusty; urgency=low
+
+  * Update from upstream with nodejs.
+
+ -- Rémi Buisson <remi.buisson@cdiscount.com>  Thu, 30 Apr 2015 08:28:13 +0000
+
 kibana (3.1.2) trusty; urgency=low
 
   * Initial release from upstream.

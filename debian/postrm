@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case "$1" in
+    remove|purge)
+	supervisorctl update all
+    ;;
+
+    *)
+    ;;
+esac
+
+
+exit 0

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case "$1" in
+    reconfigure|configure)
+	supervisorctl update kibana4
+    ;;
+
+    *)
+    ;;
+esac
+
+
+exit 0

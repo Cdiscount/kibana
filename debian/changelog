@@ -1,3 +1,9 @@
+kibana4 (4.4.1) trusty; urgency=medium
+
+  * Update from upstream.
+
+ -- Rémi Buisson <remi.buisson@cdiscount.com>  Tue, 08 Mar 2016 14:53:57 +0100
+
 kibana4 (4.1.4) trusty; urgency=low
 
   * Update from upstream.

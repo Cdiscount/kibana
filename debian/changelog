@@ -1,4 +1,4 @@
-kibana4 (4.4.1) trusty; urgency=medium
+kibana4 (4.4.1) jessie; urgency=medium
 
   * Update from upstream.
 
